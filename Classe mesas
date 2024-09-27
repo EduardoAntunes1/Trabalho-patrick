@@ -1,0 +1,48 @@
+package Funcionarios;
+
+public class Mesas {
+
+	private Integer numeromesa;
+	private Integer capacidade;
+	private String status;
+	
+	public Mesas() {
+		
+	}
+	
+	public Mesas(Integer numeromesa,Integer capacidade,String status) {
+		this.numeromesa = numeromesa;
+		this.capacidade = capacidade;
+		this.status = status;
+	}
+	
+	public Integer getNumeromesa() {
+		return numeromesa;
+	}
+	
+	public void getNumeromesa(Integer numeromesa) {
+		this.numeromesa = numeromesa;
+	}
+
+	public Integer getCapacidade() {
+		return capacidade;
+	}
+
+	public void setCapacidade(Integer capacidade) {
+		this.capacidade = capacidade;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String toString() {
+		return "Mesas [numeromesa=" + numeromesa + ", capacidade=" + capacidade + ", status" + status + "]";
+	}
+	
+	
+}
