@@ -1,0 +1,61 @@
+package Funcionarios;
+
+public class Funcionarios {
+
+	private String nome;
+	private String cargo;
+	private Integer idfuncionario;
+	private Integer totalvendas;
+	
+	public Funcionarios() {
+			
+	}
+	
+	public Funcionarios(String nome,String cargo,Integer idfuncionario,Integer totalvendas) {
+		this.nome = nome;
+		this.cargo = cargo;
+		this.idfuncionario = idfuncionario;
+		this.totalvendas = totalvendas;
+	}
+	
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void getNome( String nome ) {
+		this.nome = nome;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public Integer getIdfuncionario() {
+		return idfuncionario;
+	}
+
+	public void setIdfuncionario(Integer idfuncionario) {
+		this.idfuncionario = idfuncionario;
+	}
+
+	public Integer getTotalvendas() {
+		return totalvendas;
+	}
+
+	public void setTotalvendas(Integer totalvendas) {
+		this.totalvendas = totalvendas;
+	}
+
+	public String toString() {
+		return "Funcionarios [nome=" + nome + ", cargo=" + cargo + ", idfuncionario=" + idfuncionario + ", totalvendas" + totalvendas + "]";
+	}
+	
+	
+	
+	
+}
