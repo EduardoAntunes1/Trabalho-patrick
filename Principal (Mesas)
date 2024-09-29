@@ -1,0 +1,36 @@
+package Funcionarios;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import Classes.Mesas;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Quantos mesas dejesa informar? ");
+		int escolhaUsuario = scanner.nextInt();
+		List<Mesas> listaMesas = new ArrayList<Mesas>();
+		
+		for (int i = 0; i < escolhaUsuario; i++) {
+			System.out.println("Entre com o numero da mesa: ");
+			Integer numero = scanner.nextInt();
+			System.out.println("Entre com a capacidade da mesa: ");
+			Integer capacidade = scanner.nextInt();
+			System.out.println("Qual o status da mesa: (Disponivel/Ocupada) ");
+			String status = scanner.next();
+			
+			
+			Mesas mesas = new Mesas(numero,capacidade,status);
+			listaMesas.add(mesas);
+		}
+		
+		System.out.println("\nLista de Mesas: ");
+		for (Mesas mesas : listaMesas) {
+			System.out.println(mesas);
+		}
+	}
+
+}
