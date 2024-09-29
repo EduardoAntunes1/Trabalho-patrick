@@ -1,0 +1,41 @@
+package Funcionarios;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import Classes.Funcionarios;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Quantos funcionarios dejesa informar? ");
+		int escolhaUsuario = scanner.nextInt();
+		List<Funcionarios> listaFuncionarios = new ArrayList<Funcionarios>();
+		
+		for (int i = 0; i < escolhaUsuario; i++) {
+			System.out.println("Entre com o nome do funcionario: ");
+			String nome = scanner.next();
+			System.out.println("Entre com o cargo do funcionario: (Garçom, Cozinheiro, Gerente) ");
+			String cargo = scanner.next();
+			System.out.println("Entre com o ID do funcionario: ");
+			Integer idfuncionario = scanner.nextInt();
+			
+			double totalvendas = 0;
+			if(cargo.equalsIgnoreCase("Garçom")) {
+				System.out.println("Entre com o total de vendas: ");
+				totalvendas = scanner.nextDouble();
+			}
+			
+			Funcionarios funcionario = new Funcionarios(nome,cargo,idfuncionario,totalvendas);
+			listaFuncionarios.add(funcionario);
+		}
+		
+		System.out.println("\nLista de Funcionarios: ");
+		for (Funcionarios funcionario : listaFuncionarios) {
+			System.out.println(funcionario);
+		}
+	}
+
+}
